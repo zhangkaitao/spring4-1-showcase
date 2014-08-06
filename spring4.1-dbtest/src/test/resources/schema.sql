@@ -1,0 +1,2 @@
+CREATE TABLE users(id INTEGER, name VARCHAR(100));
+CREATE TABLE other_schema(id INTEGER, name VARCHAR(100));

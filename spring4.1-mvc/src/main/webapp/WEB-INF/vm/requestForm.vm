@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<form method="post">
+    ID : <input name="id"/><br/>
+    Name : <input name="name"/> <br/>
+    <input id="btn" type="button" value="submit"/>
+</form>
+
+<script src="/static/js/jquery-1.11.1.min.js"></script>
+<script>
+    $(function() {
+
+        $.fn.serializeObject = function(){
+            var o = {};
+            var a = this.serializeArray();
+            $.each(a, function() {
+                if (o[this.name]) {
+                    if (!o[this.name].push) {
+                        o[this.name] = [o[this.name]];
+                    }
+                    o[this.name].push(this.value || '');
+                } else {
+                    o[this.name] = this.value || '';
+                }
+            });
+            return o;
+        };
+
+        $("#btn").click(function() {
+            $.ajax({
+                type: "POST",
+                contentType: "application/json",
+                url: "/request",
+                data: '{"id" : "' + $("[name=id]").val() + '", "name" : "' + $("[name=name]").val() + '"}',
+                dataType: "html",
+                success: function(result) {alert(result)}
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
