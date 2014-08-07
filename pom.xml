@@ -17,6 +17,7 @@
         <module>spring4.1-groovy</module>
         <module>spring4.1-mvc</module>
         <module>spring4.1-resource</module>
+        <module>spring4.1-htmlunit</module>
     </modules>
 
 
@@ -27,7 +28,7 @@
         <cglib.version>3.0</cglib.version>
         <aspectj.version>1.8.1</aspectj.version>
         <aopalliance.version>1.0</aopalliance.version>
-        <spring.version>4.1.0.RC1</spring.version>
+        <spring.version>4.1.0.BUILD-SNAPSHOT</spring.version>
         <yaml.version>1.13</yaml.version>
         <ehcache-jcache.version>1.2</ehcache-jcache.version>
         <javax.cache.version>1.0.0</javax.cache.version>
@@ -178,4 +179,19 @@
         </dependency>
 
     </dependencies>
+
+    <repositories>
+        <repository>
+            <id>spring-milestone</id>
+            <url>https://repo.spring.io/libs-milestone</url>
+        </repository>
+
+        <repository>
+            <snapshots><enabled>true</enabled></snapshots>
+            <id>repository.spring.snapshot</id>
+            <name>Spring Snapshot Repository</name>
+            <url>http://repo.spring.io/snapshot</url>
+        </repository>
+
+    </repositories>
 </project>

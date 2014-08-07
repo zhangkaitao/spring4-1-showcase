@@ -28,10 +28,8 @@ import java.net.URI;
 */
 public class ProtoTest {
 
-
     static RestTemplate restTemplate;
     String baseUri = "http://localhost:8080/";
-
 
     private static Server server;
 

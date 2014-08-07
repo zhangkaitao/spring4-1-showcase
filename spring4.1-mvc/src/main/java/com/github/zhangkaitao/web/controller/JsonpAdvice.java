@@ -18,6 +18,6 @@ import java.util.Collection;
 public class JsonpAdvice extends AbstractJsonpResponseBodyAdvice {
 
     public JsonpAdvice() {
-        super(Arrays.asList("callback"));
+        super("callback");
     }
 }
