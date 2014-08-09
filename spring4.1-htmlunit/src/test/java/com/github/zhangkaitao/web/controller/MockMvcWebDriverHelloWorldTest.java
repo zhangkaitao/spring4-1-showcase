@@ -60,7 +60,6 @@ public class MockMvcWebDriverHelloWorldTest {
         DirectFieldAccessor accessor = new DirectFieldAccessor(webDriver);
         BeanWrapper wrapper = new BeanWrapperImpl(accessor.getPropertyValue("webClient"));
         wrapper.setPropertyValue("webConnection", new MockMvcWebConnection(mockMvc, contextPath));
-
     }
 
     @After

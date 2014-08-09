@@ -21,8 +21,6 @@ public class TestController {
 
     @RequestMapping("/test2")
     public String test2(@RequestParam Long id, @RequestParam String name, Model model) {
-        System.out.println(id);
-        System.out.println(name);
         model.addAttribute("id", id);
         model.addAttribute("name", name);
         return "test2";

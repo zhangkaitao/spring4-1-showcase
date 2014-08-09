@@ -48,10 +48,10 @@
                 <constructor-arg ref="cache"/>
             </bean>
             <bean class="org.springframework.web.servlet.resource.VersionResourceResolver">
-                <property name="versionStrategyMap">
+                <property name="strategyMap">
                     <map>
                         <entry key="/**">
-                            <bean class="org.springframework.web.servlet.resource.ContentBasedVersionStrategy"/>
+                            <bean class="org.springframework.web.servlet.resource.ContentVersionStrategy"/>
                         </entry>
                     </map>
                 </property>
