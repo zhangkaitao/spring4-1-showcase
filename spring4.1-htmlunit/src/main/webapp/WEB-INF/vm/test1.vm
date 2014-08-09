@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/static/js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+
+<form id="form" action="/test2" method="post">
+    <label for="id">id:</label>
+    <input type="text" id="id" name="id"/><br/>
+
+    <label for="name">name:</label>
+    <input type="text" id="name" name="name"/><br/>
+
+    <input type="submit" value="submit"/>
+</form>
+
+</body>
+</html>

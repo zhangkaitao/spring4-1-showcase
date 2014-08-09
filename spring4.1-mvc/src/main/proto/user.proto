@@ -1,9 +1,9 @@
 package com.github.zhangkaitao.pb;
 
-option java_package = "com.github.zhangkaitao.pb";
-option java_outer_classname = "UserProtos";
+ option java_package = "com.github.zhangkaitao.pb";
+ option java_outer_classname = "UserProtos";
 
-message User {
-  optional int64 id = 1;
-  optional string name = 2;
-}
+ message User {
+   optional int64 id = 1;
+   optional string name = 2;
+ }

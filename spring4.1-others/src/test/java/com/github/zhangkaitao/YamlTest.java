@@ -25,7 +25,7 @@ import java.util.Properties;
 @ActiveProfiles("production")
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:spring-yml.xml")
-public class YmlTest {
+public class YamlTest {
     @Autowired
     private ApplicationContext ctx;
 

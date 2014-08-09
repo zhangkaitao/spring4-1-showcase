@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link href="/static/css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="/static/js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+
+<form id="form" method="post">
+    <label for="id">id:</label>
+    <input type="text" id="id" name="id" value="${id}"/><br/>
+
+    <label for="name">name:</label>
+    <input type="text" id="name" name="id" value="${name}"/><br/>
+
+    <input id="submit-btn" type="submit" value="submit"/>
+
+</form>
+
+<script type="text/javascript">
+    $("#submit-btn").click(function() {
+        $(this).closest("form").attr("action", "/submit");
+        $("#id").val("123");
+        $("#name").val("zhangsan");
+        return false;
+    });
+</script>
+
+</body>
+</html>

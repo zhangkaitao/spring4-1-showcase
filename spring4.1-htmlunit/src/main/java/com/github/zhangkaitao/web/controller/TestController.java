@@ -3,6 +3,7 @@ package com.github.zhangkaitao.web.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * User: zhangkaitao
@@ -13,9 +14,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class TestController {
 
-    @RequestMapping("/test")
-    public String test(Model model) {
-        model.addAttribute("message", "hello");
-        return "test";
+    @RequestMapping("/test1")
+    public String test1(Model model) {
+        return "test1";
+    }
+
+    @RequestMapping("/test2")
+    public String test2(@RequestParam Long id, @RequestParam String name, Model model) {
+        System.out.println(id);
+        System.out.println(name);
+        model.addAttribute("id", id);
+        model.addAttribute("name", name);
+        return "test2";
     }
 }

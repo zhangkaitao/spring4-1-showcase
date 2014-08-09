@@ -40,6 +40,7 @@
         </mvc:content-negotiation>
         <mvc:velocity cache-views="false" prefix="" suffix=".vm"/>
         <mvc:groovy cache-views="false" suffix=".tpl"/>
+
     </mvc:view-resolvers>
 
     <mvc:redirect-view-controller

@@ -2,6 +2,7 @@ package com.github.zhangkaitao;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.BeanWrapper;
 import org.springframework.beans.DirectFieldAccessor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -22,11 +23,11 @@ public class DirectFieldTest {
     public void testDirectFieldAccess() { //DirectFieldBindingResult
         //嵌套设置/访问对象字段数据
         DirectFieldAccessor accessor = new DirectFieldAccessor(bean);
-        //如果对象为null，字段创建
+        //如果嵌套对象为null，字段创建
         accessor.setAutoGrowNestedPaths(true);
-        //设置属性值
+        //设置字段值
         accessor.setPropertyValue("bean2.name", "zhangsan");
-        //读取属性值
+        //读取字段值
         System.out.println(accessor.getPropertyValue("bean2.name"));
     }
 }

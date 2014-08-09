@@ -13,11 +13,11 @@ import java.util.Collection;
  * Time: ÏÂÎç8:34
  * Version: 1.0
  */
-@Order(2)
-@ControllerAdvice(basePackages = "com.github")
-public class JsonpAdvice extends AbstractJsonpResponseBodyAdvice {
+    @Order(2)
+    @ControllerAdvice(basePackages = "com.github")
+    public class JsonpAdvice extends AbstractJsonpResponseBodyAdvice {
 
-    public JsonpAdvice() {
-        super("callback");
+        public JsonpAdvice() {
+            super("callback", "jsonp");  //Ö¸¶¨jsonpParameterNames
+        }
     }
-}

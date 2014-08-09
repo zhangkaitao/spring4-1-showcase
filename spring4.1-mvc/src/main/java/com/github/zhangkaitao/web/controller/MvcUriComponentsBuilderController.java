@@ -18,12 +18,8 @@ public class MvcUriComponentsBuilderController {
     public String mvcUriComponentsBuilder1() {
         return MvcUriComponentsBuilder.fromMappingName("MUCBC#mvcUriComponentsBuilder1").build();
     }
-
-
     @RequestMapping("/uri/{id}")
     public String mvcUriComponentsBuilder2(@PathVariable Long id) {
         return MvcUriComponentsBuilder.fromMappingName("MUCBC#mvcUriComponentsBuilder2").arg(0, "123").build();
     }
-
-
 }

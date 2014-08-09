@@ -13,9 +13,10 @@
 
     <mvc:annotation-driven/>
 
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/WEB-INF/jsp/"/>
-        <property name="suffix" value=".jsp"/>
-    </bean>
+    <mvc:velocity-configurer resource-loader-path="/WEB-INF/vm/"/>
+    <mvc:view-resolvers>
+        <mvc:velocity cache-views="false" suffix=".vm"/>
+    </mvc:view-resolvers>
 
+    <mvc:resources mapping="/static/**" location="/WEB-INF/static/"/>
 </beans>
